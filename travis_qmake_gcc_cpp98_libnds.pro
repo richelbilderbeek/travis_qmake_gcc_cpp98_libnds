@@ -1,0 +1,15 @@
+INCLUDEPATH += ~/devkitpro/libnds-1.4.7/include
+INCLUDEPATH += ~/devkitpro/libnds-src-1.4.7/include/nds
+INCLUDEPATH += ~/devkitpro/devkitARM/arm-eabi/include
+LIBS += -L~/devkitpro/libnds-1.4.7/lib -lnds9
+LIBS += -L~/devkitpro/devkitARM/arm-eabi/lib -lstdc++
+DEFINES += ARM9
+CONFIG   += console
+CONFIG -= qt
+CONFIG   -= app_bundle
+TEMPLATE = app
+SOURCES += main.cpp
+QMAKE_CC = ~/devkitpro/devkitARM/bin/arm-eabi-g++
+QMAKE_CXX = ~/devkitpro/devkitARM/bin/arm-eabi-g++
+QMAKE_LINK = ~/devkitpro/devkitARM/bin/arm-eabi-g++
+QMAKE_LFLAGS = -T~/devkitpro/devkitARM/arm-eabi/lib/ds_arm9.ld
