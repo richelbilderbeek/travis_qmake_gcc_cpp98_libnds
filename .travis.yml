@@ -4,7 +4,7 @@ sudo: true
 
 install:
   - sudo ./install_packages.sh
-  - sudo ./install_lib_nds.sh
+  - sudo ./install_libnds.sh
 
 script:
   # Do not call qmake, this will not work
