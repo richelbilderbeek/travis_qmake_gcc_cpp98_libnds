@@ -1,0 +1,11 @@
+sudo:true
+
+before_install:
+  - sudo apt-get install gimp
+  - sudo apt-get install libmpfr-dev
+  - sudo apt-get install libmpc-dev
+  - sudo apt-get install texinfo
+
+script:
+  - make
+  - ./travis_qmake_gcc_cpp98_libnds.pro
