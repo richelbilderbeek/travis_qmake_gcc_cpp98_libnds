@@ -21,6 +21,24 @@ More complex builds:
 Less complex builds:
  * Use C++98: [travis_qmake_gcc_cpp98](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp98)
 
+## Log
+
+### Failed sidetrack: clone from GitHub
+
+ * clone [devKitPro buildscripts](https://github.com/devkitPro/buildscripts) 
+ * run `./build_devkit`.
+ * script redirected to [https://sourceforge.net/projects/devkitpro](https://sourceforge.net/projects/devkitpro)
+
+### Download from Sourceforge
+
+ * Go to [https://sourceforge.net/projects/devkitpro](https://sourceforge.net/projects/devkitpro)
+ * Download latest release, which was `buildscripts-20170715.tar.bz2` at 2017-10-01
+ * untar
+ * Run `./build_devkit.sh`
+ * Due [https://devkitpro.org/wiki/Getting_Started/devkitARM](https://devkitpro.org/wiki/Getting_Started/devkitARM)
+   I downloaded [libnds](https://sourceforge.net/projects/devkitpro/files/libnds/libnds-1.5.9.tar.bz2/download)
+
+   
 ## External links
 
  * ['Hello World' using Qt Creator under Ubuntu for NDS](http://www.richelbilderbeek.nl/CppHelloWorldQtCreatorUbuntuNds.htm)
