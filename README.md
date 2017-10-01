@@ -25,3 +25,4 @@ Less complex builds:
 
  * ['Hello World' using Qt Creator under Ubuntu for NDS](http://www.richelbilderbeek.nl/CppHelloWorldQtCreatorUbuntuNds.htm)
  * [devkitpro website](http://devkitpro.org)
+ * [devKitPro buildscripts](https://github.com/devkitPro/buildscripts): to set up the environment
