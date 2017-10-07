@@ -9,14 +9,17 @@ install:
   # Go to that folder
   - cd /opt/devkitpro
   # Download and extract devkitARM
-  - wget https://sourceforge.net/projects/devkitpro/files/devkitARM/devkitARM_r47/devkitARM_r47-x86_64-linux.tar.bz2
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/devkitARM/devkitARM_r47/devkitARM_r47-x86_64-linux.tar.bz2
   # Extract
   - sudo tar -xvjf devkitARM_r47-x86_64-linux.tar.bz2
   # libnds
   - mkdir libnds
   - cd libnds
-  - wget https://sourceforge.net/projects/devkitpro/files/libnds/1.7.1/libnds-1.7.1.tar.bz2
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/libnds/1.7.1/libnds-1.7.1.tar.bz2
   - sudo tar -xvjf libnds-1.7.1.tar.bz2
+  # libfat (subfolder of libnds)
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/libfat/1.1.2/libfat-nds-1.1.2.tar.bz2
+  - sudo tar -xvjf libfat-nds-1.1.2.tar.bz2
 
 script:
   # Do not call qmake, this will not work
