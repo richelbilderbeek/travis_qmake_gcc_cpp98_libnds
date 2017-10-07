@@ -39,7 +39,7 @@ install:
   # Examples
   - mkdir -p examples/nds
   - cd examples/nds
-  - sudo whet https://sourceforge.net/projects/devkitpro/files/examples/nds/nds-examples-20170915.tar.bz2
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/examples/nds/nds-examples-20170915.tar.bz2
   - sudo tar -xvjf nds-examples-20170915.tar.bz2
 
 script:
