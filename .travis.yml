@@ -3,7 +3,7 @@ language: cpp
 compiler: gcc
 
 install:
-  - echo $pwd
+  - pwd
   - my_github=${PWD##*/} 
   - echo $my_github
   # Create folder structure
