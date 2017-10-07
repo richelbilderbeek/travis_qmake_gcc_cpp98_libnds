@@ -25,8 +25,26 @@ install:
   # dswifi (subfolder of libnds)
   - sudo wget https://sourceforge.net/projects/devkitpro/files/dswifi/0.4.0/dswifi-0.4.0.tar.bz2
   - sudo tar -xvjf dswifi-0.4.0.tar.bz2
+  # maxmod (subfolder of libnds)
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/maxmod/1.0.10/maxmod-nds-1.0.10.tar.bz2
+  - sudo tar -xvjf maxmod-nds-1.0.10.tar.bz2
+  # libfilesystem (subfolder of libnds)
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/filesystem/0.9.13-1/libfilesystem-0.9.13-1.tar.bz2
+  - sudo tar -xvjf libfilesystem-0.9.13-1.tar.bz2
+  # default_arm7 (subfolder of libnds)
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/default_arm7/0.7.3/default_arm7-0.7.3.tar.bz2
+  - sudo tar -xvjf default_arm7-0.7.3.tar.bz2
+  # Go to /opt/devkitpro
+  - cd ..
+  # Examples
+  - mkdir -p examples/nds
+  - cd examples/nds
+  - sudo whet https://sourceforge.net/projects/devkitpro/files/examples/nds/nds-examples-20170915.tar.bz2
+  - sudo tar -xvjf nds-examples-20170915.tar.bz2
 
 script:
+  - export DEVKITPRO=/opt/devkitpro
+  - export DEVKITARM=$DEVKITPRO/devkitARM
   # Do not call qmake, this will not work
   - cd $my_github
   - make
