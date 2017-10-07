@@ -9,6 +9,5 @@ int main()
   std::cout << "Hello NDS\n";
 
   //Infinite waiting
-  //while (1) {}
-  //Just quit
+  while (1) {}
 }
