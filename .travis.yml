@@ -6,10 +6,14 @@ install:
   # Create folder structure
   - sudo mkdir -p /opt/devkitpro
   - sudo chmod 777 /opt/devkitpro
+  # Go to that folder
+  - cd /opt/devkitpro
   # Download and extract devkitARM
   - wget https://sourceforge.net/projects/devkitpro/files/devkitARM/devkitARM_r47/devkitARM_r47-x86_64-linux.tar.bz2
-  - cd /opt/devkitpro
-  - tar -xvjf ~/devkitARM_r47-x86_64-linux.tar.bz2
+  - wget https://sourceforge.net/projects/devkitpro/files/libnds/1.7.1/libnds-1.7.1.tar.bz2
+  # Extract
+  - sudo tar -xvjf devkitARM_r47-x86_64-linux.tar.bz2
+  - sudo tar -xvjf libnds-1.7.1.tar.bz2
 
 script:
   # Do not call qmake, this will not work
