@@ -4,6 +4,7 @@ compiler: gcc
 
 install:
   - my_github=${PWD##*/} 
+  - echo $my_github
   # Create folder structure
   - sudo mkdir -p /opt/devkitpro
   - sudo chmod 777 /opt/devkitpro
@@ -27,7 +28,7 @@ install:
 
 script:
   # Do not call qmake, this will not work
-  - cd ~
+  - cd $my_github
   - make
   #- ./travis_qmake_gcc_cpp98_libnds
   #- desmume CppHelloWorldQtCreatorUbuntuNds.nds
