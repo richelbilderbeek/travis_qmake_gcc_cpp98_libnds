@@ -3,6 +3,7 @@ language: cpp
 compiler: gcc
 
 install:
+  - my_github=${PWD##*/} 
   # Create folder structure
   - sudo mkdir -p /opt/devkitpro
   - sudo chmod 777 /opt/devkitpro
@@ -20,9 +21,13 @@ install:
   # libfat (subfolder of libnds)
   - sudo wget https://sourceforge.net/projects/devkitpro/files/libfat/1.1.2/libfat-nds-1.1.2.tar.bz2
   - sudo tar -xvjf libfat-nds-1.1.2.tar.bz2
+  # dswifi (subfolder of libnds)
+  - sudo wget https://sourceforge.net/projects/devkitpro/files/dswifi/0.4.0/dswifi-0.4.0.tar.bz2
+  - sudo tar -xvjf dswifi-0.4.0.tar.bz2
 
 script:
   # Do not call qmake, this will not work
+  - cd ~
   - make
   #- ./travis_qmake_gcc_cpp98_libnds
   #- desmume CppHelloWorldQtCreatorUbuntuNds.nds
