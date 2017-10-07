@@ -1,10 +1,15 @@
+# From https://devkitpro.org/wiki/Getting_Started/devkitARM
 language: cpp
 compiler: gcc
-sudo: true
 
 install:
-  - sudo ./install_packages.sh
-  - sudo ./install_libnds.sh
+  # Create folder structure
+  - sudo mkdir -p /opt/devkitpro
+  - sudo chmod 777 /opt/devkitpro
+  # Download and extract devkitARM
+  - wget https://sourceforge.net/projects/devkitpro/files/devkitARM/devkitARM_r47/devkitARM_r47-x86_64-linux.tar.bz2
+  - cd /opt/devkitpro
+  - tar -xvjf ~/devkitARM_r47-x86_64-linux.tar.bz2
 
 script:
   # Do not call qmake, this will not work
