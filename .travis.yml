@@ -46,7 +46,7 @@ script:
   - export DEVKITPRO=/opt/devkitpro
   - export DEVKITARM=$DEVKITPRO/devkitARM
   # Do not call qmake, this will not work
-  - cd $my_github
+  - cd ~/$my_github
   - make
   #- ./travis_qmake_gcc_cpp98_libnds
   #- desmume CppHelloWorldQtCreatorUbuntuNds.nds
