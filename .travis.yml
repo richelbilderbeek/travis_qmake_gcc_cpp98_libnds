@@ -49,5 +49,7 @@ script:
   # Do not call qmake, this will not work
   - cd ~/build/richelbilderbeek/$my_github
   - make
+  - if [[ -f travis_qmake_gcc_cpp98_libnds.nds ]]; then echo "YES :-)"; else echo "NO :-("; fi
   #- ./travis_qmake_gcc_cpp98_libnds
   #- desmume CppHelloWorldQtCreatorUbuntuNds.nds
+
